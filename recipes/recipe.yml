@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: template
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: Still under construction
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
@@ -20,9 +20,13 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/
     install:
       - micro
       - starship
+      - alacritty
+      - neovim
+      - 
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -34,8 +38,17 @@ modules:
     system:
       # If no repo information is specified, Flathub will be used by default
       install:
-        - org.mozilla.firefox
         - org.gnome.Loupe
+        - app.zen_browser.zen
+        - dev.vencord.Vesktop
+        - com.spotify.Client
+        - com.notesnook.Notesnook
+        - com.mattjakeman.ExtensionManager
+        - com.github.tchx84.Flatseal
+        - com.system76.Popsicle
+        - com.mojang.Minecraft
+        - tech.feliciano.pocket-casts
+        - com.jeffser.Alpaca
       remove:
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
