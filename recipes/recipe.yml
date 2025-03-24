@@ -1,7 +1,7 @@
 ra-41---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: template
+name: ublue
 # description will be included in the image's metadata
 description: Still under construction
 
@@ -66,5 +66,15 @@ modules:
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: gnome-extensions
+    install:
+      - Blur my Shell
+      - Just Perfection
+      - Tiling Shell
+      - User Themes
+      - Dash to Dock 
+      - Caffeine
+      - Clipboard Indicator 
+      - Frippery Move Clock 
 
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
