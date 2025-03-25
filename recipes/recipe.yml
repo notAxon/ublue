@@ -1,7 +1,7 @@
 ra-41---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: ublue
+name: test
 # description will be included in the image's metadata
 description: Still under construction
 
@@ -23,21 +23,21 @@ modules:
     install:
       - micro
       - alacritty
-      #- neovim
-      #- hyprland
-      #- xdg-dektop-portal-hyprland
-      #- waypaper
-      #- swww
-      #- hypridle
-      #- hyprlock
-      #- waybar
-      #- rofi-wayland
-      #- tmux
-      #- nemo
-      #- distrobox
-      #- polkit-gnome
-      #- gimp
-      #- blender
+      - neovim
+      - hyprland
+      - xdg-dektop-portal-hyprland
+      - waypaper
+      - swww
+      - hypridle
+      - hyprlock
+      - waybar
+      - rofi-wayland
+      - tmux
+      - nemo
+      - distrobox
+      - polkit-gnome
+      - gimp
+      - blender
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -50,17 +50,17 @@ modules:
       # If no repo information is specified, Flathub will be used by default
       install:
         - org.gnome.Loupe
-        #- app.zen_browser.zen
-        #- dev.vencord.Vesktop
-        #- com.spotify.Client
-        #- com.notesnook.Notesnook
-        #- com.mattjakeman.ExtensionManager
-        #- com.github.tchx84.Flatseal
-        #- com.system76.Popsicle
-        #- com.mojang.Minecraft
-        #- tech.feliciano.pocket-casts
-        #- com.jeffser.Alpaca
-        #- org.gnome.gitlab.somas.Apostrophe
+        - app.zen_browser.zen
+        - dev.vencord.Vesktop
+        - com.spotify.Client
+        - com.notesnook.Notesnook
+        - com.mattjakeman.ExtensionManager
+        - com.github.tchx84.Flatseal
+        - com.system76.Popsicle
+        - com.mojang.Minecraft
+        - tech.feliciano.pocket-casts
+        - com.jeffser.Alpaca
+        - org.gnome.gitlab.somas.Apostrophe
       remove:
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
@@ -68,12 +68,12 @@ modules:
   - type: gnome-extensions
     install:
       - Blur my Shell
-      #- Just Perfection
-      #- Tiling Shell
-      #- User Themes
-      #- Dash to Dock 
-      #- Caffeine
-      #- Clipboard Indicator 
-      #- Frippery Move Clock 
+      - Just Perfection
+      - Tiling Shell
+      - User Themes
+      - Dash to Dock 
+      - Caffeine
+      - Clipboard Indicator 
+      - Frippery Move Clock 
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
